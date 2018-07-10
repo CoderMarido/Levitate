@@ -1,0 +1,5 @@
+name: Levitate
+main: nl.marido.levitate.Levitate
+version: 1.0
+author: Marido
+description: Levitate is an useful example for developers to learn velocities.
