@@ -40,7 +40,7 @@ public class Activate implements Listener {
 						new BukkitRunnable() {
 							public void run() {
 								Material newhand = player.getItemInHand().getType();
-								if (newhand == item || !entries.contains(uuid)) {
+								if (newhand == item && entries.contains(uuid)) {
 									Location pull = player.getLocation().add(player.getLocation().getDirection().normalize().multiply(10));
 									for (Entity near : pull.getWorld().getNearbyEntities(pull, 7, 7, 7)) {
 										if (near != player) {
