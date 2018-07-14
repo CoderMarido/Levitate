@@ -41,14 +41,14 @@ public class Activate implements Listener {
 							public void run() {
 								Material newhand = player.getItemInHand().getType();
 								if (newhand == item && entries.contains(uuid)) {
-									Location pull = player.getLocation().add(player.getLocation().getDirection().normalize().multiply(10));
-									for (Entity near : pull.getWorld().getNearbyEntities(pull, 7, 7, 7)) {
+									Location pull = player.getLocation().add(player.getLocation().getDirection().normalize().multiply(11));
+									for (Entity near : pull.getWorld().getNearbyEntities(pull, 8, 8, 8)) {
 										if (near != player) {
 											Location location = near.getLocation();
 											double x = location.getX() - pull.getX();
 											double y = location.getY() - pull.getY();
 											double z = location.getZ() - pull.getZ();
-											Vector velocity = new Vector(x, y, z).normalize().multiply(-0.7);
+											Vector velocity = new Vector(x, y, z).normalize().multiply(-0.8);
 											near.setVelocity(velocity);
 										}
 									}
